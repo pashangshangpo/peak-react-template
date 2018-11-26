@@ -7,12 +7,12 @@ import './style/reset.scss'
 import Route from './Route'
 
 class Main extends React.Component {
-	render() {
-		return El(Route)
-	}
+  render() {
+    return El(Route)
+  }
 }
 
 ReactDOM.render(
-	El(Main),
-	document.body.appendChild(document.createElement('div'))
+  El(Main),
+  document.body.appendChild(document.createElement('div'))
 )

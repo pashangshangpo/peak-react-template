@@ -7,23 +7,19 @@ import Home from './router/home'
 
 class Routes extends React.Component {
   renderRouters() {
-    return El(Switch,
+    return El(
+      Switch,
       {},
-      El(Route,
-        {
-          exact: true,
-          path: '/',
-          component: Home,
-        }
-      )
+      El(Route, {
+        exact: true,
+        path: '/',
+        component: Home,
+      })
     )
   }
 
   render() {
-    return El(HashRouter,
-      {},
-      this.renderRouters()
-    )
+    return El(HashRouter, {}, this.renderRouters())
   }
 }
 

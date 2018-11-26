@@ -3,9 +3,6 @@ import { El } from 'react-util'
 
 export default class extends React.Component {
   render() {
-    return El('div',
-      {},
-      'Home'
-    )
+    return El('div', {}, 'Home')
   }
 }
