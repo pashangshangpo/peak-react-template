@@ -15,7 +15,6 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.css$/,
-        exclude: /(node_modules|bower_components)/,
         use: [
           'style-loader',
           {
@@ -38,7 +37,6 @@ module.exports = merge(common, {
       },
       {
         test: /\.scss$/,
-        exclude: /(node_modules|bower_components)/,
         use: [
           'style-loader',
           {
