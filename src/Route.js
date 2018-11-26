@@ -1,6 +1,7 @@
 import React from 'react'
 import { HashRouter } from 'react-router-dom'
 import { Route, Switch } from 'react-router'
+import { El } from 'react-util'
 
 import Home from './router/home'
 

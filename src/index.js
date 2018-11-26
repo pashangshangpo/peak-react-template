@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { El } from 'react-util'
 
 import './style/reset.scss'
 
@@ -12,6 +13,6 @@ class Main extends React.Component {
 }
 
 ReactDOM.render(
-	<Main />,
+	El(Main),
 	document.body.appendChild(document.createElement('div'))
 )
