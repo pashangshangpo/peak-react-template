@@ -26,6 +26,8 @@ module.exports = {
       '$common': resolve('src/common'),
       '$components': resolve('src/components'),
       '$store': resolve('src/store'),
+      '$reducers': resolve('src/store/reducers'),
+      '$actions': resolve('src/store/actions'),
       '$router': resolve('src/router'),
       '$style': resolve('src/style'),
       '$svg': resolve('src/svg')
