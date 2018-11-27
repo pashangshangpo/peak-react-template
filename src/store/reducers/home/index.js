@@ -1,22 +1,21 @@
 export default (state, action) => {
   state = state || {
-    load: false
+    load: false,
   }
 
   const Types = {
     addLoad() {
       return {
         ...state,
-        load: true
+        load: true,
       }
     },
     removeLoad() {
-
       return {
         ...state,
-        load: false
+        load: false,
       }
-    }
+    },
   }
 
   let current = Types[action.type]

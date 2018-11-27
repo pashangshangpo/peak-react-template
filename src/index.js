@@ -21,7 +21,7 @@ ReactDOM.render(
   El(
     Provider,
     {
-      store: Store
+      store: Store,
     },
     El(Main)
   ),

@@ -7,12 +7,12 @@ import { addLoad, removeLoad } from '$actions/home'
 export default connect(
   state => {
     return {
-      state
+      state,
     }
   },
   dispatch => {
     return {
-      dispatch
+      dispatch,
     }
   }
 )(
@@ -20,27 +20,23 @@ export default connect(
     componentWillMount() {
       this.props.dispatch(addLoad())
     }
-  
+
     componentDidMount() {
       setTimeout(() => {
         this.props.dispatch(removeLoad())
       }, 2000)
     }
-  
+
     renderLoad() {
       if (this.props.state.Home.load) {
         return 'Load'
       }
-      
+
       return 'noLoad'
     }
-  
+
     render() {
-      return El(
-        'div',
-        {},
-        this.renderLoad()
-      )
+      return El('div', {}, this.renderLoad())
     }
   }
 )
