@@ -1,6 +1,6 @@
 # 简介
 
-react template
+一个 React 项目模板
 
 ## 开始
 
