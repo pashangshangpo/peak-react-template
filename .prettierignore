@@ -1,5 +1,6 @@
 *.min.*
 
+/dist
 /build
 /config
 /node_modules
