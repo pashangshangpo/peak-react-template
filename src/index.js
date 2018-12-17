@@ -1,29 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import { El } from 'react-util'
+const Init = () => {
+  return new Promise(async resolve => {
+    if (Peak.env === 'local') {
+      try {
+        require('./local.config').default
+      } catch (err) {
+        console.error(
+          '请复制一份local.config.example.js，并命名为local.config.js'
+        )
+      }
 
-import './style/reset.scss'
-
-import Route from './Route'
-import RootReducer from '$reducers'
-
-const Store = createStore(RootReducer)
-
-class Main extends React.Component {
-  render() {
-    return El(Route)
-  }
+      resolve()
+    } else {
+      console.log(Peak.env)
+    }
+  })
 }
 
-ReactDOM.render(
-  El(
-    Provider,
-    {
-      store: Store,
-    },
-    El(Main)
-  ),
-  document.body.appendChild(document.createElement('div'))
-)
+Init().then(() => {
+  require('./main')
+})
