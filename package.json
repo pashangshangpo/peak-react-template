@@ -9,8 +9,14 @@
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx}": "pretty-quick",
-    "*.{css,scss,less}": "stylelint --fix"
+    "*.{js,jsx}": [
+      "pretty-quick",
+      "git add"
+    ],
+    "*.{css,scss,less}": [
+      "stylelint --fix",
+      "git add"
+    ]
   },
   "pre-commit": [
     "lint-staged"
@@ -18,18 +24,21 @@
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.1.5",
     "autoprefixer": "^9.3.1",
     "babel-loader": "^8.0.0-beta.6",
+    "babel-plugin-import": "^1.11.0",
     "clean-webpack-plugin": "^1.0.0",
     "copy-webpack-plugin": "^4.6.0",
     "css-hot-loader": "^1.4.2",
     "css-loader": "^1.0.1",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^4.0.0-beta.4",
     "lint-staged": "^8.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.10.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "peak": "https://github.com/pashangshangpo/peak.git",

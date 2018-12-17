@@ -15,13 +15,15 @@ module.exports = {
     index: './src/index.js'
   },
   output: {
-    path: resolve('build'),
+    path: resolve('dist'),
     filename: '[name].js',
+    chunkFilename: "[name].[chunkhash:5].js",
     publicPath: ''
   },
   resolve: {
     extensions: ['.js'],
     alias: {
+      '@': resolve('src'),
       '$api': resolve('src/api'),
       '$common': resolve('src/common'),
       '$components': resolve('src/components'),
@@ -37,17 +39,12 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
         use: [
           'babel-loader'
         ]
       },
       {
-        test: /\.(png|jpg|gif)/,
-        include: [
-          resolve('src')
-        ],
-        exclude: /(node_modules|bower_components)/,
+        test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2)(\?.+)?$/,
         use: [
           {
             loader: 'url-loader',
@@ -60,10 +57,6 @@ module.exports = {
       },
       {
         test: /\.svg/,
-        include: [
-          resolve('src')
-        ],
-        exclude: /(node_modules|bower_components)/,
         use: ['svg-sprite-loader']
       }
     ]
