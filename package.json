@@ -4,8 +4,8 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "peak --type server --env local",
-    "build": "peak --type build --env prod",
+    "start": "fe-peak --type server --env local",
+    "build": "fe-peak --type build --env prod",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
@@ -36,12 +36,12 @@
     "copy-webpack-plugin": "^4.6.0",
     "css-hot-loader": "^1.4.2",
     "css-loader": "^1.0.1",
+    "fe-peak": "^1.1.1",
     "html-webpack-plugin": "^4.0.0-beta.4",
     "lint-staged": "^8.1.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.10.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "peak": "https://github.com/pashangshangpo/peak.git",
     "postcss": "^7.0.6",
     "postcss-loader": "^3.0.0",
     "pre-commit": "^1.2.2",

@@ -9,5 +9,4 @@ module.exports = {
   webpackConfigProd: 'config/webpack.config.prod.js',
   template: 'index.html',
   publicPath: '/public',
-  commonCode: ['https://github.com/pashangshangpo/react-util.git'],
 }
