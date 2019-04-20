@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import Home from './home'
+import Global from './global'
 
 export default combineReducers({
-  Home,
+  Global,
 })
