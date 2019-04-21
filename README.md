@@ -1,6 +1,6 @@
 # 简介
 
-一个 React 项目模板
+> 一个 React 项目模板，配合 [peak](https://github.com/pashangshangpo/peak) 脚手架使用
 
 ## 开始
 
