@@ -25,6 +25,7 @@ module.exports = {
     alias: {
       '@': resolve('src'),
       '$api': resolve('src/api'),
+      '$assets': resolve('src/assets'),
       '$common': resolve('src/common'),
       '$components': resolve('src/components'),
       '$store': resolve('src/store'),
@@ -49,8 +50,8 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              name: 'image/[name].[hash].[ext]',
-              limit: 10000
+              name: '/image/[name].[hash].[ext]',
+              limit: 1000
             }
           }
         ]
