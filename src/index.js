@@ -8,11 +8,11 @@ const Init = () => {
           '请复制一份local.config.example.js，并命名为local.config.js'
         )
       }
-
-      resolve()
     } else {
       console.log(Peak.env)
     }
+
+    resolve()
   })
 }
 
