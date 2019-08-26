@@ -1,14 +1,7 @@
 import React from 'react'
-import { connect } from 'react-redux'
 
-export default connect(state => {
-  return {
-    state,
+export default class extends React.Component {
+  render() {
+    return <div>Home</div>
   }
-})(
-  class extends React.Component {
-    render() {
-      return <div>Home</div>
-    }
-  }
-)
+}
