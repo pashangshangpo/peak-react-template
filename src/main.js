@@ -24,5 +24,5 @@ class Main extends React.Component {
 
 ReactDOM.render(
   <Main />,
-  document.body.appendChild(document.createElement('div'))
+  document.body
 )
