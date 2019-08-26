@@ -6,6 +6,14 @@
     "plugins": [
         "@babel/plugin-proposal-class-properties",
         [
+          "import",
+          {
+            "libraryName": "antd",
+            "libraryDirectory": "es",
+            "style": "css"
+          }
+        ],
+        [
           "@babel/plugin-transform-runtime",
           {
             "corejs": false,
